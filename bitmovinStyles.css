@@ -589,12 +589,13 @@
   }
 }
 .bmpui-ui-hugeplaybacktogglebutton .bmpui-image {
-  background-image: none;
+  /* background-image: none;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 7em;
   height: 100%;
-  width: 100%;
+  width: 100%; */
+  display: none;
 }
 .bmpui-ui-hugeplaybacktogglebutton .bmpui-image:hover {
   -webkit-animation: breathe 3s ease-in-out infinite;
