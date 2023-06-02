@@ -1,3 +1,23 @@
-.bmpui-seekbar-backdrop {
+/* .bmpui-seekbar-backdrop {
   background-color: red !important;
+}
+
+.bmpui-ui-playbacktoggle-overlay {
+  display: none !important;
+} */
+
+.bmpui-ui-playbacktoggle-overlay {
+  background-color: blue !important;
+}
+.bmpui-ui-hugeplaybacktogglebutton {
+  /* display: none !important; */
+  background-color: red !important;
+  height: 100px;
+  width: 100px;
+}
+
+.bmpui-ui-subtitle-overlay {
+  /* background-color: red; */
+  max-width: 50%;
+  margin: 0px auto;
 }
