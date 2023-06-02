@@ -930,6 +930,7 @@
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   width: 100%;
+  z-index: 10000;
 }
 .bmpui-ui-seekbar .bmpui-seekbar .bmpui-seekbar-backdrop,
 .bmpui-ui-volumeslider .bmpui-seekbar .bmpui-seekbar-backdrop {
