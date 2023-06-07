@@ -14665,4 +14665,8 @@
       [90]
     )(90);
   });
+  const seekbarMarker = document.querySelector(".bmpui-seekbar-markers");
+  seekbarMarker.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 })();

@@ -934,9 +934,11 @@
 }
 .bmpui-ui-seekbar .bmpui-seekbar .bmpui-seekbar-backdrop,
 .bmpui-ui-volumeslider .bmpui-seekbar .bmpui-seekbar-backdrop {
-  background-color: hsla(0, 0%, 100%, 0.2);
+  /* background-color: hsla(0, 0%, 100%, 0.2); */
   margin: auto 0;
   width: 100%;
+  z-index: 10000;
+  background-color: red;
 }
 .bmpui-ui-seekbar .bmpui-seekbar .bmpui-seekbar-bufferlevel,
 .bmpui-ui-volumeslider .bmpui-seekbar .bmpui-seekbar-bufferlevel {
