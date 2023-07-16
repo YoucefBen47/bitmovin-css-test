@@ -2179,7 +2179,9 @@
                 i(l, c),
                 (l.prototype.configure = function (t, e) {
                   function n() {
-                    t.isPlaying() || r.isPlayInitiated ? null : null;
+                    t.isPlaying() || r.isPlayInitiated
+                      ? t.pause("ui")
+                      : t.play("ui");
                   }
                   function o() {
                     t.getViewMode() === t.exports.ViewMode.Fullscreen
