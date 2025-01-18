@@ -1140,7 +1140,7 @@
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 550px;
+  bottom: 50%;
   -webkit-transition: bottom 0.15s ease-in;
   transition: bottom 0.15s ease-in;
 }
