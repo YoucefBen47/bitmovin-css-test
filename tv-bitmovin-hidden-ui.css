@@ -1087,6 +1087,8 @@
   top: 0;
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
+  width: 65% !important;
+  /* height: 72% !important; */
   background-color: red !important;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-hidden {
@@ -1136,7 +1138,7 @@
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 20%;
+  bottom: 10%;
   -webkit-transition: bottom 0.15s ease-in;
   transition: bottom 0.15s ease-in;
 }
@@ -2253,7 +2255,7 @@
   top: 10%;
 }
 .bmpui-ui-skin-cast-receiver.bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
-  bottom: 10%;
+  bottom: 20%;
 }
 .bmpui-ui-skin-cast-receiver.bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
