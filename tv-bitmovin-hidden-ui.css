@@ -1140,7 +1140,7 @@
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 10%;
+  bottom: 20%;
   -webkit-transition: bottom 0.15s ease-in;
   transition: bottom 0.15s ease-in;
 }
@@ -2257,7 +2257,7 @@
   top: 10%;
 }
 .bmpui-ui-skin-cast-receiver.bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
-  bottom: 20%;
+  bottom: 10%;
 }
 .bmpui-ui-skin-cast-receiver.bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
