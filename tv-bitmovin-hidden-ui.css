@@ -1084,7 +1084,7 @@
   position: absolute;
   right: 0;
   text-align: center;
-  top: 0;
+  /* top: 0; */
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
   width: 65% !important;
