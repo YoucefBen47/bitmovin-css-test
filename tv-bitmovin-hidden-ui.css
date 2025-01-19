@@ -1315,7 +1315,7 @@
   -webkit-transition: opacity 0.3s, visibility 0s;
   transition: opacity 0.3s, visibility 0s;
   width: 100%;
-  display: none !important;
+  /* display: none !important; */
 }
 .bmpui-ui-titlebar.bmpui-hidden {
   opacity: 0;
