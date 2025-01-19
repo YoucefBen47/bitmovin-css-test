@@ -1090,6 +1090,8 @@
   width: 65% !important;
   /* height: 72% !important; */
   background-color: red !important;
+  margin: 0px auto !important;
+  padding: 0px !important;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-hidden {
   display: none;
