@@ -1087,7 +1087,7 @@
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
   width: 65% !important;
-  height: 72% !important;
+  /* height: 72% !important; */
   background-color: red !important;
   margin: 0px auto !important;
   padding: 0px !important;
@@ -1139,7 +1139,7 @@
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 2em;
+  bottom: 20%;
   -webkit-transition: bottom 0.15s ease-in;
   transition: bottom 0.15s ease-in;
 }
