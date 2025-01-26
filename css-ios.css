@@ -2270,7 +2270,7 @@ s .bmpui-ui-clickoverlay,
   display: -ms-inline-flexbox;
   display: inline-flex;
   line-height: 2em;
-  padding: 0.3em 0.5em;
+  /* padding: 0.3em 0.5em; */
   text-shadow: none;
 }
 .bmpui-ui-skin-cast-receiver.bmpui-ui-uicontainer
@@ -2579,10 +2579,10 @@ s .bmpui-ui-clickoverlay,
   display: none !important;
 }
 
-.bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-ui-subtitle-label {
-  /*display: inline-block !important;*/
-  /*width: auto !important;*/
-}
+/* .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-ui-subtitle-label {
+  display: inline-block !important;
+  width: auto !important;
+} */
 
 .bmpui-ui-subtitle-overlay span {
   display: inline-block !important;
