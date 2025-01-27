@@ -1183,18 +1183,18 @@
                     a = function () {
                       n.onControlsHide.dispatch(o), (s = !1);
                     };
-                  this.castUiHideTimeout = new r.Timeout(i.hideDelay, a);
+                  //   this.castUiHideTimeout = new r.Timeout(i.hideDelay, a);
                   var l = function () {
                       s || (n.onControlsShow.dispatch(o), (s = !0));
                     },
                     c = function () {
-                      l(), o.castUiHideTimeout.clear();
+                      //   l(), o.castUiHideTimeout.clear();
                     },
                     u = function () {
-                      l(), o.castUiHideTimeout.start();
+                      //   l(), o.castUiHideTimeout.start();
                     },
                     p = function () {
-                      t.isPlaying() ? u() : c();
+                      //   t.isPlaying() ? u() : c();
                     };
                   t.on(t.exports.PlayerEvent.Play, u),
                     t.on(t.exports.PlayerEvent.Paused, c),
@@ -1203,8 +1203,8 @@
                     n.getConfig().events.onUpdated.subscribe(u);
                 }),
                 (t.prototype.release = function () {
-                  e.prototype.release.call(this),
-                    this.castUiHideTimeout.clear();
+                  e.prototype.release.call(this);
+                  // this.castUiHideTimeout.clear();
                 }),
                 t
               );
