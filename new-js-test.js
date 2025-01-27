@@ -1311,7 +1311,7 @@
                       ((this.castUiHideTimeout = new c.Timeout(
                         o.hideDelay,
                         function () {
-                          // t.onControlsHide.dispatch(n), (i = !1);
+                          t.onControlsHide.dispatch(n), (i = !1);
                         }
                       )),
                       function () {
@@ -1881,7 +1881,7 @@
                       t.cancel = 0 < o;
                     }),
                     t.onControlsHide.subscribe(function () {
-                      // n.hide();
+                      n.hide();
                     });
                 }),
                 p);
@@ -4040,7 +4040,7 @@
                         f.isUiShown = !0;
                       }),
                       n.onControlsHide.subscribe(function () {
-                        // f.isUiShown = !1;
+                        f.isUiShown = !1;
                       }),
                       (s = r = i = !1),
                       (l = function (e, t) {
@@ -8507,7 +8507,7 @@
                     (r = !0), (i.keepHiddenWithoutMetadata && !s) || o.show();
                   }),
                     t.onControlsHide.subscribe(function () {
-                      // (r = !1), o.hide();
+                      (r = !1), o.hide();
                     }),
                     n();
                 }),
@@ -9053,8 +9053,8 @@
                       r.addClass(i.prefixCss(g.CONTROLS_SHOWN));
                   }),
                   t.onControlsHide.subscribe(function () {
-                    // r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
-                    //   r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
+                    r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
+                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
                   });
                 e.on(e.exports.PlayerEvent.PlayerResized, function (e) {
                   var t = Math.round(
@@ -14177,14 +14177,14 @@
               }),
               Object.defineProperty(u.prototype, "onPreviewControlsHide", {
                 get: function () {
-                  // return this.events.onPreviewControlsHide;
+                  return this.events.onPreviewControlsHide;
                 },
                 enumerable: !1,
                 configurable: !0,
               }),
               Object.defineProperty(u.prototype, "onControlsHide", {
                 get: function () {
-                  // return this.events.onControlsHide;
+                  return this.events.onControlsHide;
                 },
                 enumerable: !1,
                 configurable: !0,

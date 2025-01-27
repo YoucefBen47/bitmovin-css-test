@@ -14660,6 +14660,77 @@
           },
           {},
         ],
+        114: [
+          function (e, t, n) {
+            "use strict";
+            var o =
+              (this && this.__extends) ||
+              (function () {
+                var e = function (t, n) {
+                  return (e =
+                    Object.setPrototypeOf ||
+                    ({ __proto__: [] } instanceof Array &&
+                      function (e, t) {
+                        e.__proto__ = t;
+                      }) ||
+                    function (e, t) {
+                      for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
+                    })(t, n);
+                };
+                return function (t, n) {
+                  function o() {
+                    this.constructor = t;
+                  }
+                  e(t, n),
+                    (t.prototype =
+                      null === n
+                        ? Object.create(n)
+                        : ((o.prototype = n.prototype), new o()));
+                };
+              })();
+            Object.defineProperty(n, "__esModule", { value: !0 }),
+              (n.CustomCloseButton = void 0);
+            var i = e("./togglebutton"),
+              r = (function (e) {
+                function t(t) {
+                  void 0 === t && (t = {});
+                  var n = e.call(this, t) || this,
+                    o = {
+                      cssClass: "ui-customclosetogglebutton",
+                      text: "close",
+                    };
+                  return (n.config = n.mergeConfig(t, o, n.config)), n;
+                }
+                return (
+                  o(t, e),
+                  (t.prototype.configure = function (t, n) {
+                    var o = this;
+                    e.prototype.configure.call(this, t, n),
+                      window.bitmovin.customMessageHandler &&
+                        (window.bitmovin.customMessageHandler.on(
+                          "toggleCloseButton",
+                          function (e) {
+                            o.isEnabled() ? o.disable() : o.enable();
+                          }
+                        ),
+                        this.onClick.subscribe(function () {
+                          var e =
+                            window.bitmovin.customMessageHandler.sendSynchronous(
+                              "closePlayer"
+                            );
+                          console.log("Return value from native:", e),
+                            window.bitmovin.customMessageHandler.sendAsynchronous(
+                              "closePlayerAsync"
+                            );
+                        }));
+                  }),
+                  t
+                );
+              })(i.ToggleButton);
+            n.CustomCloseButton = r;
+          },
+          { "./togglebutton": 69 },
+        ],
       },
       {},
       [90]
