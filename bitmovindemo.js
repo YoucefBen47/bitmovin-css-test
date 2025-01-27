@@ -3707,6 +3707,14 @@
               }
               return (
                 o(t, e),
+                window.bitmovin.customMessageHandler.on(
+                  "toggleCloseSeekbar",
+                  function (e) {
+                    window.bitmovin.customMessageHandler.sendSynchronous(
+                      "toggleCloseSeekbar"
+                    );
+                  }
+                ),
                 (t.prototype.initialize = function () {
                   e.prototype.initialize.call(this),
                     this.hasLabel() && this.getLabel().initialize();
