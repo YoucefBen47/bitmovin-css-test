@@ -1805,6 +1805,7 @@
                       (window.bitmovin.customMessageHandler.on(
                         "toggleCloseButton",
                         function (e) {
+                          t.onControlsHide.dispatch(n), (r = !1);
                           //   o.isEnabled() ? o.disable() : o.enable();
                           window.bitmovin.customMessageHandler.sendAsynchronous(
                             "closePlayerAsync"
