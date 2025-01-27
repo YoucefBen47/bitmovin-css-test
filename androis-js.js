@@ -14671,30 +14671,16 @@
   });
 })();
 
-window.bitmovin.customMessageHandler.on("showControls", function (e) {
-  // var element = document.querySelector(".bmpui-seekbar-backdrop");
+window.bitmovin.customMessageHandler.on("toggleCloseSeekbar", function (e) {
+  var element = document.querySelector(".bmpui-seekbar-backdrop");
   var uicontainer = document.querySelector(".bmpui-ui-controlbar");
   var uiTitle = document.querySelector(".bmpui-ui-titlebar");
-  // var airPlayToggle = document.querySelector(".bmpui-ui-airplaytogglebutton");
-  // element.classList.add("red");
-  uicontainer.classList.remove("bmpui-hidden");
-  uiTitle.classList.remove("bmpui-hidden");
+  var airPlayToggle = document.querySelector(".bmpui-ui-airplaytogglebutton");
+  element.classList.add("red");
+  uicontainer.classList.toggle("bmpui-hidden");
+  uiTitle.classList.toggle("bmpui-hidden");
   //   airPlayToggle.classList.toggle("bmpui-hidden");
   //   i.removeClass(o.prefixCss("controls-shown"));
   //   i.addClass(o.prefixCss("controls-hidden"));
-  window.bitmovin.customMessageHandler.sendSynchronous("showControls");
-});
-
-window.bitmovin.customMessageHandler.on("hideControls", function (e) {
-  // var element = document.querySelector(".bmpui-seekbar-backdrop");
-  var uicontainer = document.querySelector(".bmpui-ui-controlbar");
-  var uiTitle = document.querySelector(".bmpui-ui-titlebar");
-  // var airPlayToggle = document.querySelector(".bmpui-ui-airplaytogglebutton");
-  // element.classList.add("red");
-  uicontainer.classList.add("bmpui-hidden");
-  uiTitle.classList.add("bmpui-hidden");
-  //   airPlayToggle.classList.toggle("bmpui-hidden");
-  //   i.removeClass(o.prefixCss("controls-shown"));
-  //   i.addClass(o.prefixCss("controls-hidden"));
-  window.bitmovin.customMessageHandler.sendSynchronous("hideControls");
+  window.bitmovin.customMessageHandler.sendSynchronous("toggleCloseSeekbar");
 });
