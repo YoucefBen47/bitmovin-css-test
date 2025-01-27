@@ -12956,8 +12956,12 @@
 window.bitmovin.customMessageHandler.on("toggleCloseSeekbar", function (e) {
   var element = document.querySelector(".bmpui-seekbar-backdrop");
   var uicontainer = document.querySelector(".bmpui-ui-controlbar");
+  var uiTitle = document.querySelector(".bmpui-ui-label");
+  var airPlayToggle = document.querySelector(".bmpui-ui-airplaytogglebutton");
   element.classList.add("red");
   uicontainer.classList.toggle("bmpui-hidden");
+  uiTitle.classList.toggle("bmpui-hidden");
+  airPlayToggle.classList.toggle("bmpui-hidden");
   //   i.removeClass(o.prefixCss("controls-shown"));
   //   i.addClass(o.prefixCss("controls-hidden"));
   window.bitmovin.customMessageHandler.sendSynchronous("toggleCloseSeekbar");
