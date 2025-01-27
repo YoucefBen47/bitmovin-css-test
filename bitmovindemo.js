@@ -1805,11 +1805,7 @@
                       (window.bitmovin.customMessageHandler.on(
                         "toggleCloseButton",
                         function (e) {
-                          t.onControlsHide.dispatch(n), (r = !1);
-                          //   o.isEnabled() ? o.disable() : o.enable();
-                          window.bitmovin.customMessageHandler.sendAsynchronous(
-                            "closePlayerAsync"
-                          );
+                          o.isEnabled() ? o.disable() : o.enable();
                         }
                       ),
                       this.onClick.subscribe(function () {
@@ -3665,7 +3661,14 @@
               function t(t) {
                 void 0 === t && (t = {});
                 var n = e.call(this, t) || this;
-                (n.playbackPositionPercentage = 0),
+                window.bitmovin.customMessageHandler.on(
+                  "toggleControls",
+                  function (e) {
+                    window.bitmovin.customMessageHandler.sendSynchronous(
+                      "closePlayer"
+                    );
+                  }
+                )((n.playbackPositionPercentage = 0)),
                   (n.isUserSeeking = !1),
                   (n.seekBarEvents = {
                     onSeek: new s.EventDispatcher(),
