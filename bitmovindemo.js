@@ -8529,8 +8529,8 @@
                         ".bmpui-seekbar-backdrop"
                       );
                       element.classList.add("red");
-                      i.removeClass(o.prefixCss("controls-shown")),
-                        i.addClass(o.prefixCss("controls-hidden"));
+                      i.removeClass(o.prefixCss("controls-shown"));
+                      i.addClass(o.prefixCss("controls-hidden"));
                       //   window.bitmovin.customMessageHandler.sendSynchronous(
                       //     "toggleCloseSeekbar"
                       //   );
