@@ -8524,20 +8524,17 @@
                     s = [];
                   window.bitmovin.customMessageHandler.on(
                     "toggleCloseSeekbar",
-                    n.onControlsHide.subscribe(function () {
-                      i.removeClass(o.prefixCss(t.CONTROLS_SHOWN)),
-                        i.addClass(o.prefixCss(t.CONTROLS_HIDDEN));
+                    function (e) {
+                      var element = document.querySelector(
+                        ".bmpui-seekbar-backdrop"
+                      );
+                      element.classList.add("red");
+                      i.removeClass(o.prefixCss("controls-shown")),
+                        i.addClass(o.prefixCss("controls-hidden"));
                       window.bitmovin.customMessageHandler.sendSynchronous(
                         "toggleCloseSeekbar"
                       );
-                    })
-                    // function (e) {
-                    //   i.removeClass(o.prefixCss(t.CONTROLS_SHOWN)),
-                    //     i.addClass(o.prefixCss(t.CONTROLS_HIDDEN));
-                    //   window.bitmovin.customMessageHandler.sendSynchronous(
-                    //     "toggleCloseSeekbar"
-                    //   );
-                    // }
+                    }
                   );
                   for (var l in a.PlayerUtils.PlayerState)
                     if (isNaN(Number(l))) {
