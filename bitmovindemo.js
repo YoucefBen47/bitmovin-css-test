@@ -3707,14 +3707,6 @@
               }
               return (
                 o(t, e),
-                window.bitmovin.customMessageHandler.on(
-                  "toggleCloseSeekbar",
-                  function (e) {
-                    window.bitmovin.customMessageHandler.sendSynchronous(
-                      "toggleCloseSeekbar"
-                    );
-                  }
-                ),
                 (t.prototype.initialize = function () {
                   e.prototype.initialize.call(this),
                     this.hasLabel() && this.getLabel().initialize();
@@ -8530,6 +8522,16 @@
                   var o = this,
                     i = this.getDomElement(),
                     s = [];
+                  window.bitmovin.customMessageHandler.on(
+                    "toggleCloseSeekbar",
+                    function (e) {
+                      i.removeClass(o.prefixCss(t.CONTROLS_SHOWN)),
+                        i.addClass(o.prefixCss(t.CONTROLS_HIDDEN));
+                      window.bitmovin.customMessageHandler.sendSynchronous(
+                        "toggleCloseSeekbar"
+                      );
+                    }
+                  );
                   for (var l in a.PlayerUtils.PlayerState)
                     if (isNaN(Number(l))) {
                       var c =
