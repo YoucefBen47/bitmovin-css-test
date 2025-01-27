@@ -12955,7 +12955,9 @@
 
 window.bitmovin.customMessageHandler.on("toggleCloseSeekbar", function (e) {
   var element = document.querySelector(".bmpui-seekbar-backdrop");
+  var uicontainer = document.querySelector(".bmpui-ui-uicontainer");
   element.classList.add("red");
+  uicontainer.classList.toggle("bmpui-hidden");
   //   i.removeClass(o.prefixCss("controls-shown"));
   //   i.addClass(o.prefixCss("controls-hidden"));
   window.bitmovin.customMessageHandler.sendSynchronous("toggleCloseSeekbar");
