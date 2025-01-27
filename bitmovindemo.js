@@ -8531,9 +8531,9 @@
                       element.classList.add("red");
                       i.removeClass(o.prefixCss("controls-shown")),
                         i.addClass(o.prefixCss("controls-hidden"));
-                      window.bitmovin.customMessageHandler.sendSynchronous(
-                        "toggleCloseSeekbar"
-                      );
+                      //   window.bitmovin.customMessageHandler.sendSynchronous(
+                      //     "toggleCloseSeekbar"
+                      //   );
                     }
                   );
                   for (var l in a.PlayerUtils.PlayerState)
