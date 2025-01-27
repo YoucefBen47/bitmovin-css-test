@@ -1805,7 +1805,10 @@
                       (window.bitmovin.customMessageHandler.on(
                         "toggleCloseButton",
                         function (e) {
-                          o.isEnabled() ? o.disable() : o.enable();
+                          //   o.isEnabled() ? o.disable() : o.enable();
+                          window.bitmovin.customMessageHandler.sendAsynchronous(
+                            "closePlayerAsync"
+                          );
                         }
                       ),
                       this.onClick.subscribe(function () {
@@ -5833,13 +5836,11 @@
                     a = !1,
                     l = function () {
                       var e = new f({ text: "X" });
-                      e
-                        .getDomElement()
-                        .css({
-                          "font-size": "200px",
-                          "line-height": "200px",
-                          visibility: "hidden",
-                        }),
+                      e.getDomElement().css({
+                        "font-size": "200px",
+                        "line-height": "200px",
+                        visibility: "hidden",
+                      }),
                         o.addComponent(e),
                         o.updateComponents(),
                         o.show();
@@ -5866,12 +5867,10 @@
                       ) {
                         var d = g[p];
                         d instanceof f &&
-                          d
-                            .getDomElement()
-                            .css({
-                              "font-size": i + "px",
-                              "letter-spacing": r + "px",
-                            });
+                          d.getDomElement().css({
+                            "font-size": i + "px",
+                            "letter-spacing": r + "px",
+                          });
                       }
                     };
                   e.on(e.exports.PlayerEvent.PlayerResized, function () {
@@ -5888,15 +5887,13 @@
                             .getDomElement()
                             .addClass(o.prefixCss(t.CLASS_CEA_608)),
                           s && (l(), (s = !1))),
-                        n
-                          .getDomElement()
-                          .css({
-                            left:
-                              e.position.column * t.CEA608_COLUMN_OFFSET + "%",
-                            top: e.position.row * t.CEA608_ROW_OFFSET + "%",
-                            "font-size": i + "px",
-                            "letter-spacing": r + "px",
-                          }));
+                        n.getDomElement().css({
+                          left:
+                            e.position.column * t.CEA608_COLUMN_OFFSET + "%",
+                          top: e.position.row * t.CEA608_ROW_OFFSET + "%",
+                          "font-size": i + "px",
+                          "letter-spacing": r + "px",
+                        }));
                     });
                   var c = function () {
                     o.getDomElement().removeClass(o.prefixCss(t.CLASS_CEA_608)),
