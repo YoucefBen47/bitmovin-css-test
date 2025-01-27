@@ -14682,7 +14682,7 @@ window.bitmovin.customMessageHandler.on("showControls", function (e) {
   //   airPlayToggle.classList.toggle("bmpui-hidden");
   //   i.removeClass(o.prefixCss("controls-shown"));
   //   i.addClass(o.prefixCss("controls-hidden"));
-  window.bitmovin.customMessageHandler.sendSynchronous("toggleCloseSeekbar");
+  window.bitmovin.customMessageHandler.sendSynchronous("showControls");
 });
 
 window.bitmovin.customMessageHandler.on("hideControls", function (e) {
@@ -14696,5 +14696,5 @@ window.bitmovin.customMessageHandler.on("hideControls", function (e) {
   //   airPlayToggle.classList.toggle("bmpui-hidden");
   //   i.removeClass(o.prefixCss("controls-shown"));
   //   i.addClass(o.prefixCss("controls-hidden"));
-  window.bitmovin.customMessageHandler.sendSynchronous("toggleCloseSeekbar");
+  window.bitmovin.customMessageHandler.sendSynchronous("hideControls");
 });
