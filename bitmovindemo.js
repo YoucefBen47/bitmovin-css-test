@@ -4283,29 +4283,29 @@
                 }),
                 (t.SMOOTH_PLAYBACK_POSITION_UPDATE_DISABLED = -1),
                 (t.CLASS_SEEKING = "seeking"),
-                (t.prototype.configure = function (t, n) {
-                  var o = this;
-                  e.prototype.configure.call(this, t, n),
-                    window.bitmovin.customMessageHandler &&
-                      (window.bitmovin.customMessageHandler.on(
-                        "toggleCloseSeekbar",
-                        function (e) {
-                          window.bitmovin.customMessageHandler.sendSynchronous(
-                            "toggleCloseSeekbar"
-                          );
-                        }
-                      ),
-                      this.onClick.subscribe(function () {
-                        var e =
-                          window.bitmovin.customMessageHandler.sendSynchronous(
-                            "toggleCloseSeekbar"
-                          );
-                        console.log("Return value from native:", e),
-                          window.bitmovin.customMessageHandler.sendAsynchronous(
-                            "toggleCloseSeekbar"
-                          );
-                      }));
-                }),
+                // (t.prototype.configure = function (t, n) {
+                //   var o = this;
+                //   e.prototype.configure.call(this, t, n),
+                //     window.bitmovin.customMessageHandler &&
+                //       (window.bitmovin.customMessageHandler.on(
+                //         "toggleCloseSeekbar",
+                //         function (e) {
+                //           window.bitmovin.customMessageHandler.sendSynchronous(
+                //             "toggleCloseSeekbar"
+                //           );
+                //         }
+                //       ),
+                //       this.onClick.subscribe(function () {
+                //         var e =
+                //           window.bitmovin.customMessageHandler.sendSynchronous(
+                //             "toggleCloseSeekbar"
+                //           );
+                //         console.log("Return value from native:", e),
+                //           window.bitmovin.customMessageHandler.sendAsynchronous(
+                //             "toggleCloseSeekbar"
+                //           );
+                //       }));
+                // }),
                 t
               );
             })(i.Component);
