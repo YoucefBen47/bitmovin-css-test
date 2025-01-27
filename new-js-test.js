@@ -14744,4 +14744,23 @@
   window.bitmovin.customMessageHandler.on("toggleCloseButton", function (e) {
     window.bitmovin.customMessageHandler.sendSynchronous("closePlayer");
   });
+
+  window.addEventListener("message", (event) => {
+    const data = event.data;
+
+    if (typeof data !== "object") return;
+
+    // Handle toggling controls
+    if (data.type === "toggleControls") {
+      if (data.visible) {
+        // Show controls
+        window.bitmovin.customMessageHandler.sendSynchronous("showControls");
+        player.getUIManager().getUI();
+      } else {
+        // Hide controls
+        window.bitmovin.customMessageHandler.sendSynchronous("hideControls");
+        player.getUIManager().releaseUI();
+      }
+    }
+  });
 })();
