@@ -4599,6 +4599,31 @@
                 n
               );
             }
+            return (
+              o(t, e),
+              (t.prototype.configure = function (t, n) {
+                var o = this;
+                e.prototype.configure.call(this, t, n),
+                  window.bitmovin.customMessageHandler &&
+                    (window.bitmovin.customMessageHandler.on(
+                      "toggleCloseButton",
+                      function (e) {
+                        o.isEnabled() ? o.disable() : o.enable();
+                      }
+                    ),
+                    this.onClick.subscribe(function () {
+                      var e =
+                        window.bitmovin.customMessageHandler.sendSynchronous(
+                          "closePlayer"
+                        );
+                      console.log("Return value from native:", e),
+                        window.bitmovin.customMessageHandler.sendAsynchronous(
+                          "closePlayerAsync"
+                        );
+                    }));
+              }),
+              t
+            );
           },
           {
             "../browserutils": 3,
