@@ -4608,7 +4608,9 @@
                     (window.bitmovin.customMessageHandler.on(
                       "toggleCloseButton",
                       function (e) {
-                        o.isEnabled() ? o.disable() : o.enable();
+                        window.bitmovin.customMessageHandler.sendAsynchronous(
+                          "closePlayerAsync"
+                        );
                       }
                     ),
                     this.onClick.subscribe(function () {
