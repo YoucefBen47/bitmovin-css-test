@@ -12956,7 +12956,7 @@
 window.bitmovin.customMessageHandler.on("toggleCloseSeekbar", function (e) {
   var element = document.querySelector(".bmpui-seekbar-backdrop");
   var uicontainer = document.querySelector(".bmpui-ui-controlbar");
-  var uiTitle = document.querySelector(".bmpui-ui-label");
+  var uiTitle = document.querySelector(".bmpui-ui-titlebar");
   var airPlayToggle = document.querySelector(".bmpui-ui-airplaytogglebutton");
   element.classList.add("red");
   uicontainer.classList.toggle("bmpui-hidden");
