@@ -8522,20 +8522,20 @@
                   var o = this,
                     i = this.getDomElement(),
                     s = [];
-                  window.bitmovin.customMessageHandler.on(
-                    "toggleCloseSeekbar",
-                    function (e) {
-                      var element = document.querySelector(
-                        ".bmpui-seekbar-backdrop"
-                      );
-                      element.classList.add("red");
-                      i.removeClass(o.prefixCss("controls-shown"));
-                      i.addClass(o.prefixCss("controls-hidden"));
-                      window.bitmovin.customMessageHandler.sendSynchronous(
-                        "toggleCloseSeekbar"
-                      );
-                    }
-                  );
+                  //   window.bitmovin.customMessageHandler.on(
+                  //     "toggleCloseSeekbar",
+                  //     function (e) {
+                  //       var element = document.querySelector(
+                  //         ".bmpui-seekbar-backdrop"
+                  //       );
+                  //       element.classList.add("red");
+                  //       i.removeClass(o.prefixCss("controls-shown"));
+                  //       i.addClass(o.prefixCss("controls-hidden"));
+                  //       window.bitmovin.customMessageHandler.sendSynchronous(
+                  //         "toggleCloseSeekbar"
+                  //       );
+                  //     }
+                  //   );
                   for (var l in a.PlayerUtils.PlayerState)
                     if (isNaN(Number(l))) {
                       var c =
@@ -12952,3 +12952,11 @@
   )(88);
 });
 //# sourceMappingURL=bitmovinplayer-ui.min.js.map
+
+window.bitmovin.customMessageHandler.on("toggleCloseSeekbar", function (e) {
+  //   var element = document.querySelector(".bmpui-seekbar-backdrop");
+  //   element.classList.add("red");
+  //   i.removeClass(o.prefixCss("controls-shown"));
+  //   i.addClass(o.prefixCss("controls-hidden"));
+  window.bitmovin.customMessageHandler.sendSynchronous("toggleCloseSeekbar");
+});
