@@ -4599,33 +4599,6 @@
                 n
               );
             }
-            return (
-              o(t, e),
-              (t.prototype.configure = function (t, n) {
-                var o = this;
-                e.prototype.configure.call(this, t, n),
-                  window.bitmovin.customMessageHandler &&
-                    (window.bitmovin.customMessageHandler.on(
-                      "toggleCloseButton",
-                      function (e) {
-                        window.bitmovin.customMessageHandler.sendAsynchronous(
-                          "closePlayerAsync"
-                        );
-                      }
-                    ),
-                    this.onClick.subscribe(function () {
-                      var e =
-                        window.bitmovin.customMessageHandler.sendSynchronous(
-                          "closePlayer"
-                        );
-                      console.log("Return value from native:", e),
-                        window.bitmovin.customMessageHandler.sendAsynchronous(
-                          "closePlayerAsync"
-                        );
-                    }));
-              }),
-              t
-            );
           },
           {
             "../browserutils": 3,
@@ -14737,9 +14710,7 @@
                         (window.bitmovin.customMessageHandler.on(
                           "toggleCloseButton",
                           function (e) {
-                            window.bitmovin.customMessageHandler.sendAsynchronous(
-                              "closePlayerAsync"
-                            );
+                            o.isEnabled() ? o.disable() : o.enable();
                           }
                         ),
                         this.onClick.subscribe(function () {
@@ -14768,5 +14739,9 @@
   const seekbarMarker = document.querySelector(".bmpui-seekbar-markers");
   seekbarMarker.addEventListener("click", (e) => {
     e.stopPropagation();
+  });
+
+  window.bitmovin.customMessageHandler.on("toggleCloseButton", function (e) {
+    window.bitmovin.customMessageHandler.sendSynchronous("closePlayer");
   });
 })();
