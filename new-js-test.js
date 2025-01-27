@@ -14763,4 +14763,14 @@
       }
     }
   });
+
+  window.bitmovin.customMessageHandler.on("toggleControls", function (e) {
+    if (e.visible) {
+      bitmovinPlayer.getUIManager().getUI(); // Show controls
+      window.bitmovin.customMessageHandler.sendSynchronous("showControls");
+    } else {
+      bitmovinPlayer.getUIManager().releaseUI(); // Hide controls
+      window.bitmovin.customMessageHandler.sendSynchronous("hideControls");
+    }
+  });
 })();
