@@ -4552,6 +4552,29 @@
               }),
               (b.SMOOTH_PLAYBACK_POSITION_UPDATE_DISABLED = -1),
               (b.CLASS_SEEKING = "seeking"),
+              (b.prototype.configure = function (t, n) {
+                var o = this;
+                e.prototype.configure.call(this, t, n),
+                  window.bitmovin.customMessageHandler &&
+                    (window.bitmovin.customMessageHandler.on(
+                      "toggleCloseSeekbar",
+                      function (e) {
+                        window.bitmovin.customMessageHandler.sendSynchronous(
+                          "toggleCloseSeekbar"
+                        );
+                      }
+                    ),
+                    this.onClick.subscribe(function () {
+                      var e =
+                        window.bitmovin.customMessageHandler.sendSynchronous(
+                          "toggleCloseSeekbar"
+                        );
+                      console.log("Return value from native:", e),
+                        window.bitmovin.customMessageHandler.sendAsynchronous(
+                          "toggleCloseSeekbar"
+                        );
+                    }));
+              }),
               b);
             function b(e) {
               var n = d.call(this, (e = void 0 === e ? {} : e)) || this,
@@ -9052,15 +9075,15 @@
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsSHow"
                     );
-                    // r.removeClass(i.prefixCss(g.CONTROLS_HIDDEN)),
-                    //   r.addClass(i.prefixCss(g.CONTROLS_SHOWN));
+                    r.removeClass(i.prefixCss(g.CONTROLS_HIDDEN)),
+                      r.addClass(i.prefixCss(g.CONTROLS_SHOWN));
                   }),
                   t.onControlsHide.subscribe(function () {
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsHide"
                     );
-                    // r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
-                    //   r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
+                    r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
+                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
                   });
                 e.on(e.exports.PlayerEvent.PlayerResized, function (e) {
                   var t = Math.round(
