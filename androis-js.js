@@ -4552,29 +4552,6 @@
               }),
               (b.SMOOTH_PLAYBACK_POSITION_UPDATE_DISABLED = -1),
               (b.CLASS_SEEKING = "seeking"),
-              (b.prototype.configure = function (t, n) {
-                var o = this;
-                e.prototype.configure.call(this, t, n),
-                  window.bitmovin.customMessageHandler &&
-                    (window.bitmovin.customMessageHandler.on(
-                      "toggleCloseSeekbar",
-                      function (e) {
-                        window.bitmovin.customMessageHandler.sendSynchronous(
-                          "toggleCloseSeekbar"
-                        );
-                      }
-                    ),
-                    this.onClick.subscribe(function () {
-                      var e =
-                        window.bitmovin.customMessageHandler.sendSynchronous(
-                          "toggleCloseSeekbar"
-                        );
-                      console.log("Return value from native:", e),
-                        window.bitmovin.customMessageHandler.sendAsynchronous(
-                          "toggleCloseSeekbar"
-                        );
-                    }));
-              }),
               b);
             function b(e) {
               var n = d.call(this, (e = void 0 === e ? {} : e)) || this,
