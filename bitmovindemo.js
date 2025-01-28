@@ -8598,10 +8598,16 @@
                     e.isCasting() &&
                       i.addClass(this.prefixCss(t.REMOTE_CONTROL)),
                     n.onControlsShow.subscribe(function () {
+                      window.bitmovin.customMessageHandler.sendSynchronous(
+                        "controlsSHow"
+                      );
                       i.removeClass(o.prefixCss(t.CONTROLS_HIDDEN)),
                         i.addClass(o.prefixCss(t.CONTROLS_SHOWN));
                     }),
                     n.onControlsHide.subscribe(function () {
+                      window.bitmovin.customMessageHandler.sendSynchronous(
+                        "controlsHide"
+                      );
                       i.removeClass(o.prefixCss(t.CONTROLS_SHOWN)),
                         i.addClass(o.prefixCss(t.CONTROLS_HIDDEN));
                     });
