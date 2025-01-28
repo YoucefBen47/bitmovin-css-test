@@ -9049,10 +9049,16 @@
                   }),
                   e.isCasting() && r.addClass(this.prefixCss(g.REMOTE_CONTROL)),
                   t.onControlsShow.subscribe(function () {
+                    window.bitmovin.customMessageHandler.sendSynchronous(
+                      "controlsSHow"
+                    );
                     // r.removeClass(i.prefixCss(g.CONTROLS_HIDDEN)),
                     //   r.addClass(i.prefixCss(g.CONTROLS_SHOWN));
                   }),
                   t.onControlsHide.subscribe(function () {
+                    window.bitmovin.customMessageHandler.sendSynchronous(
+                      "controlsHide"
+                    );
                     // r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
                     //   r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
                   });
