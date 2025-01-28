@@ -1167,7 +1167,7 @@ s .bmpui-ui-clickoverlay,
   white-space: normal;
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608.bmpui-controlbar-visible {
-  bottom: 2em;
+  /* bottom: 2em; */
   -webkit-transition: none;
   transition: none;
 }
