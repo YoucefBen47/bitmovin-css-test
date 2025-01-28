@@ -1104,6 +1104,7 @@ s .bmpui-ui-clickoverlay,
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container {
   position: absolute;
+  background-color: green !important;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
@@ -1138,15 +1139,15 @@ s .bmpui-ui-clickoverlay,
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  /* bottom: 2em;
+  bottom: 20%;
   -webkit-transition: bottom 0.15s ease-in;
-  transition: bottom 0.15s ease-in; */
+  transition: bottom 0.15s ease-in;
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608 {
-  /* bottom: 2em;
+  bottom: 2em;
   left: 3em;
   right: 3em;
-  top: 2em; */
+  top: 2em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608
   .bmpui-subtitle-region-container.bmpui-subtitle-position-default {
