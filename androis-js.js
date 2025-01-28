@@ -9117,6 +9117,19 @@
                   t.config
                 )),
                 (t.playerStateChange = new a.EventDispatcher()),
+                (t.prototype.configure = function (t, n) {
+                  var o = this;
+                  e.prototype.configure.call(this, t, n),
+                    window.bitmovin.customMessageHandler &&
+                      window.bitmovin.customMessageHandler.on(
+                        "toggleCloseSeekbar",
+                        function (e) {
+                          window.bitmovin.customMessageHandler.sendSynchronous(
+                            "toggleCloseSeekbar"
+                          );
+                        }
+                      );
+                }),
                 t
               );
             }
