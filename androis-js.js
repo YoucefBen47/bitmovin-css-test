@@ -9049,12 +9049,12 @@
                   }),
                   e.isCasting() && r.addClass(this.prefixCss(g.REMOTE_CONTROL)),
                   t.onControlsShow.subscribe(function () {
-                    r.removeClass(i.prefixCss(g.CONTROLS_HIDDEN)),
-                      r.addClass(i.prefixCss(g.CONTROLS_SHOWN));
+                    // r.removeClass(i.prefixCss(g.CONTROLS_HIDDEN)),
+                    //   r.addClass(i.prefixCss(g.CONTROLS_SHOWN));
                   }),
                   t.onControlsHide.subscribe(function () {
-                    r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
-                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
+                    // r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
+                    //   r.addClass(i.prefixCss(g.CONTROLS_HIDDEN));
                   });
                 e.on(e.exports.PlayerEvent.PlayerResized, function (e) {
                   var t = Math.round(
