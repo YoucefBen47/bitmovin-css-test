@@ -129,7 +129,7 @@
   transition: opacity 0.3s, visibility 0s;
   width: 100%;
   z-index: 10000 !important;
-  background-color: red !important;
+  /*background-color: red !important;*/
 }
 .bmpui-ui-controlbar.bmpui-hidden {
   opacity: 0;
