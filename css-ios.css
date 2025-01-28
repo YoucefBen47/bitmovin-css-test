@@ -1087,7 +1087,7 @@ s .bmpui-ui-clickoverlay,
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
   width: 65% !important;
-  background-color: red !important;
+  /* background-color: red !important; */
   margin: 0px auto !important;
   padding: 0px !important;
 }
@@ -1104,7 +1104,7 @@ s .bmpui-ui-clickoverlay,
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container {
   position: absolute;
-  background-color: green !important;
+  /* background-color: green !important; */
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
