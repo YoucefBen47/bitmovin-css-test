@@ -1138,12 +1138,12 @@ s .bmpui-ui-clickoverlay,
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 2em;
+  /* bottom: 2em; */
   -webkit-transition: bottom 0.15s ease-in;
   transition: bottom 0.15s ease-in;
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608 {
-  bottom: 2em;
+  /* bottom: 2em; */
   left: 3em;
   right: 3em;
   top: 2em;
@@ -1167,7 +1167,7 @@ s .bmpui-ui-clickoverlay,
   white-space: normal;
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608.bmpui-controlbar-visible {
-  /* bottom: 2em; */
+  bottom: 2em;
   -webkit-transition: none;
   transition: none;
 }
