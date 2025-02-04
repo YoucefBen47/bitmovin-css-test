@@ -1142,6 +1142,7 @@
   height: 0;
   white-space: pre-line;
   width: 0;
+  background-color: yellow !important;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
   bottom: 20%;
