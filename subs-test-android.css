@@ -1100,11 +1100,13 @@
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay p {
   display: block;
+  background-color: blue !important;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container {
   position: absolute;
+  background-color: green !important;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
@@ -1113,7 +1115,6 @@
   left: 3em;
   right: 3em;
   top: auto;
-  background-color: green !important;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
@@ -1122,6 +1123,7 @@
   bottom: 0;
   position: absolute;
   width: 100%;
+  background-color: pink !important;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay .bmpui-ui-subtitle-label {
   color: #fff;
