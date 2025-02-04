@@ -1101,6 +1101,8 @@
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay p {
   display: block;
   background-color: blue !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
