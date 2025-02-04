@@ -1088,7 +1088,7 @@
   transition: bottom 0.15s ease-out;
   width: 65% !important;
   /* height: 72% !important; */
-  background-color: red !important;
+  /* background-color: red !important; */
   margin: 0px auto !important;
   padding: 0px !important;
 }
@@ -1105,6 +1105,7 @@
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container {
   position: absolute;
+  background-color: green !important;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
