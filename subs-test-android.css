@@ -1113,7 +1113,7 @@
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container.bmpui-subtitle-position-default {
-  bottom: 2em;
+  bottom: 0px;
   left: 3em;
   right: 3em;
   top: auto;
