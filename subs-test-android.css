@@ -2602,5 +2602,5 @@
 .bmpui-ui-subtitle-label {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: bold !important;
-  font-size: 2vw !important;
+  /* font-size: 2vw !important; */
 }
