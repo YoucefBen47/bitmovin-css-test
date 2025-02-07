@@ -1100,7 +1100,7 @@
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay p {
   display: block;
-  background-color: blue !important;
+  /* background-color: blue !important; */
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -1108,7 +1108,7 @@
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container {
   position: absolute;
-  background-color: green !important;
+  /* background-color: green !important; */
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
@@ -1132,8 +1132,8 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, -1px 0 0 #000,
-    1px 0 0 #000, -1px 1px 0 #000, 0 1px 0 #000, 1px 1px 0 #000;
+  /* text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, -1px 0 0 #000,
+    1px 0 0 #000, -1px 1px 0 #000, 0 1px 0 #000, 1px 1px 0 #000; */
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
@@ -1142,7 +1142,7 @@
   height: 0;
   white-space: pre-line;
   width: 0;
-  background-color: yellow !important;
+  /* background-color: yellow !important; */
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
   bottom: 20%;
