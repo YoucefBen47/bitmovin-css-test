@@ -8,6 +8,7 @@
  * Bitmovin Player Version 8.119.0 
  * 
  ****************************************************************************/
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
 .bmpui-ui-airplaytogglebutton,
 .bmpui-ui-audiotracksettingstogglebutton,
 .bmpui-ui-buffering-overlay,
@@ -1088,7 +1089,7 @@
   transition: bottom 0.15s ease-out;
   width: 65% !important;
   /* height: 72% !important; */
-  background-color: red !important;
+  /* background-color: red !important; */
   margin: 0px auto !important;
   padding: 0px !important;
 }
@@ -1163,7 +1164,7 @@
   top: 0;
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608 .bmpui-ui-subtitle-label {
-  font-family: Courier New, Courier, Nimbus Mono L, Cutive Mono, monospace;
+  font-family: "Helvetica Neue", sans-serif;
   line-height: 1em;
   position: absolute;
   text-transform: uppercase;
