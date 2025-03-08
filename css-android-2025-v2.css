@@ -1088,7 +1088,7 @@
   top: 0;
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
-  width: 65% !important;
+  /* width: 65% !important; */
   /* height: 72% !important; */
   /* background-color: red !important; */
   margin: 0px auto !important;
@@ -1159,7 +1159,7 @@
 }
 .bmpui-ui-subtitle-overlay.bmpui-cea608 .bmpui-ui-subtitle-label {
   font-family: Courier New, Courier, Nimbus Mono L, Cutive Mono, monospace;
-  line-height: 3em;
+  line-height: 1em;
   position: absolute;
   text-transform: uppercase;
 }
