@@ -1094,7 +1094,6 @@
   margin: 0px !important;
   padding: 0px !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  display: inline;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-hidden {
   display: none;
@@ -2592,6 +2591,7 @@
   padding: 3px 0px 3px 0px !important;
   margin: 0px !important;
   /*width: auto !important;*/
+  display: inline;
 }
 
 .bmpui-ui-subtitle-label {
