@@ -1130,8 +1130,6 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, -1px 0 0 #000,
-    1px 0 0 #000, -1px 1px 0 #000, 0 1px 0 #000, 1px 1px 0 #000;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
