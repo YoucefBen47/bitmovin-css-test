@@ -1080,18 +1080,18 @@
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
   bottom: 0;
   font-size: 20px;
-  /* left: 0; */
+  left: 0;
   pointer-events: none;
   position: absolute;
-  /* right: 0; */
+  right: 0;
   text-align: center;
   top: 0;
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
-  /* width: 65% !important; */
+  width: 65% !important;
   /* height: 72% !important; */
-  /* background-color: red !important; */
-  margin: 0px !important;
+  background-color: red !important;
+  margin: 0px auto !important;
   padding: 0px !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -2590,7 +2590,7 @@
   background-color: rgba(0, 0, 0, 0.3) !important;
   padding: 3px 0px 3px 0px !important;
   margin: 0px !important;
-  /* width: auto !important; */
+  /*width: auto !important;*/
 }
 
 .bmpui-ui-subtitle-label {
