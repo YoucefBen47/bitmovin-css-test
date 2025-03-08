@@ -2112,25 +2112,25 @@ s .bmpui-ui-clickoverlay,
   background-color: rgba(255, 0, 255, 0.25);
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-50 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 0.5em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-75 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 0.75em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-100 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 1em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-150 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 1.5em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-200 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 2em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-300 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 3em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-fontsize-400 .bmpui-ui-subtitle-label {
-  font-size: 22px;
+  font-size: 4em;
 }
 .bmpui-ui-subtitle-overlay.bmpui-characteredge-none .bmpui-ui-subtitle-label {
   text-shadow: none;
@@ -2412,7 +2412,7 @@ s .bmpui-ui-clickoverlay,
 .bmpui-ui-skin-smallscreen.bmpui-layout-max-width-400 .bmpui-ui-settings-panel,
 .bmpui-ui-skin-smallscreen.bmpui-layout-max-width-400
   .bmpui-ui-subtitle-overlay {
-  font-size: 22px;
+  font-size: 0.6em;
 }
 .bmpui-ui-skin-smallscreen.bmpui-layout-max-width-600
   .bmpui-ui-buffering-overlay,
@@ -2427,7 +2427,7 @@ s .bmpui-ui-clickoverlay,
 .bmpui-ui-skin-smallscreen.bmpui-layout-max-width-600 .bmpui-ui-settings-panel,
 .bmpui-ui-skin-smallscreen.bmpui-layout-max-width-600
   .bmpui-ui-subtitle-overlay {
-  font-size: 22px;
+  font-size: 0.8em;
 }
 .bmpui-ui-skin-smallscreen.bmpui-no-flexbox
   .bmpui-ui-titlebar
@@ -2592,16 +2592,10 @@ s .bmpui-ui-clickoverlay,
   background-color: rgba(0, 0, 0, 0.3) !important;
   padding: 0px 4px !important;
   width: auto !important;
-  font-size: 22px !important;
 }
 
 .bmpui-ui-subtitle-label {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 700 !important;
   /* font-size: 2vw !important; */
-  font-size: 22px !important;
-}
-
-.bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
-  font-size: 22px !important;
 }
