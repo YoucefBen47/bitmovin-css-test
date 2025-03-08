@@ -1078,6 +1078,8 @@
   display: none;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
+  display: flex;
+  justify-content: center; /* Horizontally center */
   bottom: 0;
   font-size: 20px;
   left: 0;
