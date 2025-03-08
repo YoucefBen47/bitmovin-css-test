@@ -2591,7 +2591,7 @@
   padding: 3px 0px 3px 0px !important;
   margin: 0px !important;
   /*width: auto !important;*/
-  display: inline-block !important;
+  display: inline !important;
 }
 
 .bmpui-ui-subtitle-label {
