@@ -1088,7 +1088,7 @@ s .bmpui-ui-clickoverlay,
   top: 0;
   -webkit-transition: bottom 0.15s ease-out;
   transition: bottom 0.15s ease-out;
-  width: 65% !important;
+  /* width: 65% !important; */
   /* background-color: red !important; */
   margin: 0px auto !important;
   padding: 0px !important;
@@ -2593,6 +2593,9 @@ s .bmpui-ui-clickoverlay,
   padding: 0px 4px !important;
   width: auto !important;
   font-size: 22px !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
 .bmpui-ui-subtitle-label {
