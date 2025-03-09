@@ -2590,7 +2590,7 @@
   background-color: rgba(0, 0, 0, 0.3) !important;
   padding: 3px 0px !important;
   margin: 0px !important;
-  /*width: auto !important;*/
+  width: auto !important;
 }
 
 .bmpui-ui-subtitle-label {
