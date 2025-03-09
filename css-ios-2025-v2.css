@@ -2593,7 +2593,7 @@ s .bmpui-ui-clickoverlay,
   left: 50% !important;
   transform: translateX(-50%) !important;
   background-color: rgba(0, 0, 0, 0.3) !important;
-  padding: 0px 4px !important;
+  padding: 3px 4px !important;
   width: auto !important;
   font-size: 22px !important;
 }
