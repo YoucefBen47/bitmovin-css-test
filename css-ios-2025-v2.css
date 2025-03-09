@@ -1093,6 +1093,9 @@ s .bmpui-ui-clickoverlay,
   margin: 0px auto !important;
   padding: 0px !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-hidden {
   display: none;
@@ -2593,7 +2596,6 @@ s .bmpui-ui-clickoverlay,
   padding: 0px 4px !important;
   width: auto !important;
   font-size: 22px !important;
-  text-align: center !important;
 }
 
 .bmpui-ui-subtitle-label {
