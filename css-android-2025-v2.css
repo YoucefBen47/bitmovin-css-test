@@ -1112,7 +1112,7 @@
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container.bmpui-subtitle-position-default {
-  bottom: 0;
+  bottom: 2em;
   left: 3em;
   right: 3em;
   top: auto;
@@ -1136,7 +1136,7 @@
   .bmpui-ui-subtitle-label:nth-child(1n-1):after {
   content: "\a";
   height: 0;
-  white-space: normal;
+  white-space: pre-line;
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
@@ -2598,7 +2598,7 @@
 .bmpui-ui-subtitle-label {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 700 !important;
-  display: inline-block !important;
+  display: inline-block;
   line-height: 1.5;
   vertical-align: top;
   background-color: rgba(0, 0, 0, 0.3) !important;
