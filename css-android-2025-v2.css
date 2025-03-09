@@ -1112,7 +1112,7 @@
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container.bmpui-subtitle-position-default {
-  bottom: 2em;
+  bottom: 0px !important;
   left: 3em;
   right: 3em;
   top: auto;
@@ -1136,7 +1136,7 @@
   .bmpui-ui-subtitle-label:nth-child(1n-1):after {
   content: "\a";
   height: 0;
-  white-space: pre-line;
+  white-space: normal !important;
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
