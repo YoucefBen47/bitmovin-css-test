@@ -2593,7 +2593,6 @@ s .bmpui-ui-clickoverlay,
   padding: 0px 4px !important;
   width: auto !important;
   font-size: 22px !important;
-  align-self: center !important;
 }
 
 .bmpui-ui-subtitle-label {
@@ -2601,6 +2600,7 @@ s .bmpui-ui-clickoverlay,
   font-weight: 700 !important;
   /* font-size: 2vw !important; */
   font-size: 22px !important;
+  background-color: red !important;
 }
 
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
