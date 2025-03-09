@@ -2600,9 +2600,12 @@ s .bmpui-ui-clickoverlay,
   font-weight: 700 !important;
   /* font-size: 2vw !important; */
   font-size: 22px !important;
-  background-color: red !important;
 }
 
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay {
   font-size: 22px !important;
+}
+
+.bmpui-subtitle-region .bmpui-container-wrapper {
+  background-color: green !important;
 }
