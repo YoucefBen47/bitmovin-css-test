@@ -2589,11 +2589,8 @@ s .bmpui-ui-clickoverlay,
 .bmpui-ui-subtitle-overlay span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   display: inline-block !important;
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
   background-color: rgba(0, 0, 0, 0.3) !important;
-  padding: 4px 4px !important;
+  padding: 0px 4px !important;
   width: auto !important;
   font-size: 22px !important;
 }
