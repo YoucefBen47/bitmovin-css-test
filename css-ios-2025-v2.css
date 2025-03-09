@@ -1107,7 +1107,7 @@ s .bmpui-ui-clickoverlay,
   .bmpui-ui-subtitle-overlay
   .bmpui-subtitle-region-container {
   position: absolute;
-  background-color: green !important;
+  text-align: center !important;
 }
 .bmpui-ui-uicontainer
   .bmpui-ui-subtitle-overlay
@@ -2612,4 +2612,8 @@ s .bmpui-ui-clickoverlay,
 
 .bmpui-subtitle-region .bmpui-container-wrapper {
   background-color: green !important;
+}
+
+.bmpui-subtitle-region-container {
+  background-color: red !important;
 }
