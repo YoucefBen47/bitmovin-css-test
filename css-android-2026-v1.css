@@ -1179,7 +1179,7 @@
   width: 0;
 }
 .bmpui-ui-uicontainer .bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 5em;
+  bottom: 20%;
   -webkit-transition: bottom 0.15s ease-in;
   transition: bottom 0.15s ease-in;
 }
@@ -2716,4 +2716,11 @@
 
 .bmpui-ui-subtitle-label {
   display: none !important;
+}
+
+video {
+  object-fit: contain;
+}
+body.zoom-mode video {
+  object-fit: cover;
 }
