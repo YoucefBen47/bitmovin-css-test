@@ -9067,8 +9067,6 @@
                   }),
                   e.isCasting() && r.addClass(this.prefixCss(g.REMOTE_CONTROL)),
                   t.onControlsShow.subscribe(function () {
-                    console.log("showing controls");
-
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsSHow",
                     );
@@ -9079,8 +9077,17 @@
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsHide",
                     );
-                    (r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
-                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN)));
+                    window.bitmovin.customMessageHandler.on(
+                      "controlsHide",
+                      function (data) {
+                        console.log("controls hide");
+                        (r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
+                          r.addClass(i.prefixCss(g.CONTROLS_HIDDEN)));
+                      },
+                    )(
+                      r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
+                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN)),
+                    );
                   }));
                 (e.on(e.exports.PlayerEvent.PlayerResized, function (e) {
                   var t = Math.round(
@@ -14699,34 +14706,4 @@
   seekbarMarker.addEventListener("click", (e) => {
     e.stopPropagation();
   });
-  if (window.bitmovin && window.bitmovin.customMessageHandler) {
-    console.log(
-      "Zoom listener: customMessageHandler already available inside IIFE",
-    );
-
-    window.bitmovin.customMessageHandler.on("zoom", function (data) {
-      console.log("Zoom message received from RN:", data);
-
-      var shouldZoom = data === "true";
-
-      var video = document.querySelector("video");
-      if (video) {
-        video.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
-        video.style.transformOrigin = "center center";
-        video.style.transition = "transform 0.3s ease"; // optional smooth
-      }
-
-      // Optional: zoom the whole UI container too
-      var container = document.querySelector(".bmpui-ui-container");
-      if (container) {
-        container.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
-        container.style.transformOrigin = "center center";
-        container.style.transition = "transform 0.3s ease";
-      }
-    });
-  } else {
-    console.log(
-      "Zoom listener: customMessageHandler not yet available inside IIFE",
-    );
-  }
 })();
