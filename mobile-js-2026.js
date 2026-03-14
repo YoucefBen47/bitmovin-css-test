@@ -14716,6 +14716,6 @@
 })();
 
 window.bitmovin.customMessageHandler.on("setZoom", function (data) {
-  var parsed = JSON.parse(data);
+  var parsed = typeof data === "string" ? JSON.parse(data) : data;
   document.body.classList.toggle("zoom-mode", !!parsed.zoom);
 });
