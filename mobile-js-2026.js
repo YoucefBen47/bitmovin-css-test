@@ -14714,3 +14714,8 @@
     });
   }
 })();
+
+window.bitmovin.customMessageHandler.on("setZoom", function (data) {
+  var parsed = JSON.parse(data);
+  document.body.classList.toggle("zoom-mode", !!parsed.zoom);
+});
