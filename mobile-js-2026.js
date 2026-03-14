@@ -9067,6 +9067,8 @@
                   }),
                   e.isCasting() && r.addClass(this.prefixCss(g.REMOTE_CONTROL)),
                   t.onControlsShow.subscribe(function () {
+                    console.log("showing controls");
+
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsSHow",
                     );
