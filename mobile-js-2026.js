@@ -9067,6 +9067,8 @@
                   }),
                   e.isCasting() && r.addClass(this.prefixCss(g.REMOTE_CONTROL)),
                   t.onControlsShow.subscribe(function () {
+                    console.log("showing controls");
+
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsSHow",
                     );
@@ -9077,17 +9079,8 @@
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsHide",
                     );
-                    window.bitmovin.customMessageHandler.on(
-                      "controlsHide",
-                      function (data) {
-                        console.log("controls hide");
-                        (r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
-                          r.addClass(i.prefixCss(g.CONTROLS_HIDDEN)));
-                      },
-                    )(
-                      r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
-                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN)),
-                    );
+                    (r.removeClass(i.prefixCss(g.CONTROLS_SHOWN)),
+                      r.addClass(i.prefixCss(g.CONTROLS_HIDDEN)));
                   }));
                 (e.on(e.exports.PlayerEvent.PlayerResized, function (e) {
                   var t = Math.round(
