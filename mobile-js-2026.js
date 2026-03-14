@@ -14701,22 +14701,24 @@
 
 (function () {
   if (window.bitmovin && window.bitmovin.customMessageHandler) {
-    window.bitmovin.customMessageHandler.on("setZoom", function (data) {
-      document.body.classList.toggle("zoom-mode", !!data.zoom);
-    });
-  } else {
-    document.addEventListener("DOMContentLoaded", function () {
-      window.bitmovin &&
-        window.bitmovin.customMessageHandler &&
-        window.bitmovin.customMessageHandler.on("setZoom", function (data) {
-          document.body.classList.toggle("zoom-mode", !!data.zoom);
-        });
+    window.bitmovin.customMessageHandler.on("zoom", function (data) {
+      console.log("message");
+
+      // var shouldZoom = data === "true";
+
+      // // Example: scale the main video element
+      // var video = document.querySelector("video");
+      // if (video) {
+      //   video.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
+      //   video.style.transformOrigin = "center center";
+      // }
+
+      // // Optional: also scale the whole UI container if needed
+      // var container = document.querySelector(".bmpui-ui-container");
+      // if (container) {
+      //   container.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
+      //   container.style.transformOrigin = "center center";
+      // }
     });
   }
 })();
-
-window.bitmovin.customMessageHandler.on("setZoom", function (data) {
-  console.log("setZoom received", data);
-  var parsed = typeof data === "string" ? JSON.parse(data) : data;
-  document.body.classList.toggle("zoom-mode", !!parsed.zoom);
-});
