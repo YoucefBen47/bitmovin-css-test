@@ -14699,23 +14699,34 @@
   seekbarMarker.addEventListener("click", (e) => {
     e.stopPropagation();
   });
-})();
+  if (window.bitmovin && window.bitmovin.customMessageHandler) {
+    console.log(
+      "Zoom listener: customMessageHandler already available inside IIFE",
+    );
 
-(function () {
-  console.log("message - script started"); // should appear immediately if script runs
+    window.bitmovin.customMessageHandler.on("zoom", function (data) {
+      console.log("Zoom message received from RN:", data);
 
-  setTimeout(function () {
-    console.log("message - checking after 1.5s");
+      var shouldZoom = data === "true";
 
-    if (window.bitmovin && window.bitmovin.customMessageHandler) {
-      console.log("message - customMessageHandler FOUND!");
+      var video = document.querySelector("video");
+      if (video) {
+        video.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
+        video.style.transformOrigin = "center center";
+        video.style.transition = "transform 0.3s ease"; // optional smooth
+      }
 
-      window.bitmovin.customMessageHandler.on("zoom", function (data) {
-        console.log("message - zoom message received!", data);
-        // your zoom logic here...
-      });
-    } else {
-      console.log("message - customMessageHandler NOT available yet");
-    }
-  }, 1500); // 1.5 seconds - adjust if needed (try 3000 if still missing)
+      // Optional: zoom the whole UI container too
+      var container = document.querySelector(".bmpui-ui-container");
+      if (container) {
+        container.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
+        container.style.transformOrigin = "center center";
+        container.style.transition = "transform 0.3s ease";
+      }
+    });
+  } else {
+    console.log(
+      "Zoom listener: customMessageHandler not yet available inside IIFE",
+    );
+  }
 })();
