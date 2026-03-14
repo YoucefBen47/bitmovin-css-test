@@ -14700,22 +14700,20 @@
 })();
 
 (function () {
-  console.log("message");
-  if (window.bitmovin && window.bitmovin.customMessageHandler) {
-    window.bitmovin.customMessageHandler.on("zoom", function (data) {
-      // var shouldZoom = data === "true";
-      // // Example: scale the main video element
-      // var video = document.querySelector("video");
-      // if (video) {
-      //   video.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
-      //   video.style.transformOrigin = "center center";
-      // }
-      // // Optional: also scale the whole UI container if needed
-      // var container = document.querySelector(".bmpui-ui-container");
-      // if (container) {
-      //   container.style.transform = shouldZoom ? "scale(1.4)" : "scale(1)";
-      //   container.style.transformOrigin = "center center";
-      // }
-    });
-  }
+  console.log("message - script started"); // should appear immediately if script runs
+
+  setTimeout(function () {
+    console.log("message - checking after 1.5s");
+
+    if (window.bitmovin && window.bitmovin.customMessageHandler) {
+      console.log("message - customMessageHandler FOUND!");
+
+      window.bitmovin.customMessageHandler.on("zoom", function (data) {
+        console.log("message - zoom message received!", data);
+        // your zoom logic here...
+      });
+    } else {
+      console.log("message - customMessageHandler NOT available yet");
+    }
+  }, 1500); // 1.5 seconds - adjust if needed (try 3000 if still missing)
 })();
