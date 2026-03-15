@@ -14702,6 +14702,9 @@
 // ADD HERE - outside everything
 window.addEventListener("load", function () {
   setTimeout(function () {
-    console.log(window.bitmovin.customMessageHandler);
+    console.log(
+      "window.bitmovin.customMessageHandler",
+      window.bitmovin.customMessageHandler,
+    );
   }, 1000);
 });
