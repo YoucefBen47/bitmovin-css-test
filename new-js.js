@@ -5607,13 +5607,11 @@
                           fontSizeFactor: r.cea608FontSizeFactor,
                         };
                         var f = new d({ text: "X" });
-                        (f
-                          .getDomElement()
-                          .css({
-                            "font-size": "200px",
-                            "line-height": "200px",
-                            visibility: "hidden",
-                          }),
+                        (f.getDomElement().css({
+                          "font-size": "200px",
+                          "line-height": "200px",
+                          visibility: "hidden",
+                        }),
                           r.addComponent(f),
                           r.updateComponents(),
                           r.show());
@@ -5649,13 +5647,11 @@
                           }));
                         for (
                           var w = function (e) {
-                              (e
-                                .getDomElement()
-                                .css({
-                                  "font-size": "".concat(a, "px"),
-                                  "line-height": "".concat(s - i, "px"),
-                                  "letter-spacing": "".concat(l, "px"),
-                                }),
+                              (e.getDomElement().css({
+                                "font-size": "".concat(a, "px"),
+                                "line-height": "".concat(s - i, "px"),
+                                "letter-spacing": "".concat(l, "px"),
+                              }),
                                 (e.regionStyle = "margin: "
                                   .concat(i / 2, "px; height: ")
                                   .concat(s, "px")));
@@ -5692,14 +5688,12 @@
                           var o =
                             e.position.column * t.CEA608_COLUMN_OFFSET + "%";
                           ("0%" === o && (o = t.DEFAULT_CAPTION_LEFT_OFFSET),
-                            n
-                              .getDomElement()
-                              .css({
-                                left: o,
-                                "font-size": "".concat(a, "px"),
-                                "letter-spacing": "".concat(l, "px"),
-                                "line-height": "".concat(s - i, "px"),
-                              }),
+                            n.getDomElement().css({
+                              left: o,
+                              "font-size": "".concat(a, "px"),
+                              "letter-spacing": "".concat(l, "px"),
+                              "line-height": "".concat(s - i, "px"),
+                            }),
                             (n.regionStyle = "margin: "
                               .concat(i / 2, "px; height: ")
                               .concat(s, "px")));
@@ -10643,10 +10637,16 @@
                     e.isCasting() &&
                       i.addClass(this.prefixCss(t.REMOTE_CONTROL)),
                     n.onControlsShow.subscribe(function () {
+                      window.bitmovin.customMessageHandler.sendSynchronous(
+                        "controlsSHow",
+                      );
                       (i.removeClass(o.prefixCss(t.CONTROLS_HIDDEN)),
                         i.addClass(o.prefixCss(t.CONTROLS_SHOWN)));
                     }),
                     n.onControlsHide.subscribe(function () {
+                      window.bitmovin.customMessageHandler.sendSynchronous(
+                        "controlsHide",
+                      );
                       (i.removeClass(o.prefixCss(t.CONTROLS_SHOWN)),
                         i.addClass(o.prefixCss(t.CONTROLS_HIDDEN)));
                     }));
