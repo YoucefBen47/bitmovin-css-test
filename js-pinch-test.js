@@ -14697,29 +14697,11 @@
   seekbarMarker.addEventListener("click", (e) => {
     e.stopPropagation();
   });
-  const uiContainer = document.querySelector(".bmpui-ui-uicontainer");
-  if (uiContainer) {
-    uiContainer.addEventListener(
-      "touchstart",
-      function (e) {
-        if (e.touches.length > 1) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      },
-      { passive: false },
-    );
-
-    uiContainer.addEventListener(
-      "touchmove",
-      function (e) {
-        if (e.touches.length > 1) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      },
-      { passive: false },
-    );
-  }
-  console.log("bitmovin.customMessageHandler", bitmovin?.customMessageHandler);
 })();
+
+// ADD HERE - outside everything
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    console.log(window.bitmovin.customMessageHandler);
+  }, 1000);
+});
