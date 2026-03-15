@@ -14702,6 +14702,8 @@
     uiContainer.addEventListener(
       "touchstart",
       function (e) {
+        console.log("touch start");
+
         if (e.touches.length > 1) {
           e.preventDefault();
           e.stopPropagation();
@@ -14713,6 +14715,7 @@
     uiContainer.addEventListener(
       "touchmove",
       function (e) {
+        console.log("touch move");
         if (e.touches.length > 1) {
           e.preventDefault();
           e.stopPropagation();
