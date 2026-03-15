@@ -14721,12 +14721,6 @@
       { passive: false },
     );
   }
-  // Prevent WebView pinch zoom on the UI layer
-  (function () {
-    var meta = document.createElement("meta");
-    meta.name = "viewport";
-    meta.content =
-      "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
-    document.head.appendChild(meta);
-  })();
 })();
+
+console.log(bitmovin.customMessageHandler);
