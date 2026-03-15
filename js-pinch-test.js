@@ -14721,6 +14721,5 @@
       { passive: false },
     );
   }
+  console.log("bitmovin.customMessageHandler", bitmovin?.customMessageHandler);
 })();
-
-console.log(bitmovin.customMessageHandler);
