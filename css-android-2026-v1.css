@@ -10,6 +10,11 @@
  ****************************************************************************/
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
+
+html,
+body {
+  touch-action: none;
+}
 .bmpui-ui-airplaytogglebutton,
 .bmpui-ui-audiotracksettingstogglebutton,
 .bmpui-ui-buffering-overlay,
@@ -2716,32 +2721,4 @@
 
 .bmpui-ui-subtitle-label {
   display: none !important;
-}
-
-video {
-  object-fit: contain;
-}
-body.zoom-mode video {
-  object-fit: cover;
-}
-
-/* Force the UI container to stay 1:1 with the screen, even if the video zooms */
-.bmpui-ui-uicontainer {
-  transform: scale(1) !important;
-  -webkit-transform: scale(1) !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  /* Prevent the UI from shifting if the video 'centers' itself during zoom */
-  margin: 0 !important;
-}
-
-/* Ensure individual bars don't inherit any scaling logic */
-.bmpui-ui-controlbar,
-.bmpui-ui-titlebar,
-.bmpui-ui-playback-controls {
-  transform: scale(1) !important;
-  -webkit-transform: scale(1) !important;
 }

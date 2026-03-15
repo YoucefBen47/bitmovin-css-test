@@ -9067,8 +9067,6 @@
                   }),
                   e.isCasting() && r.addClass(this.prefixCss(g.REMOTE_CONTROL)),
                   t.onControlsShow.subscribe(function () {
-                    console.log("showing controls");
-
                     window.bitmovin.customMessageHandler.sendSynchronous(
                       "controlsSHow",
                     );
@@ -14699,4 +14697,13 @@
   seekbarMarker.addEventListener("click", (e) => {
     e.stopPropagation();
   });
+})();
+
+// Prevent WebView viewport zoom
+(function () {
+  var meta = document.createElement("meta");
+  meta.name = "viewport";
+  meta.content =
+    "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+  document.head.appendChild(meta);
 })();
